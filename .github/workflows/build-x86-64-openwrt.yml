@@ -3,7 +3,7 @@ name: build x86/64 openwrt
 on:
   workflow_dispatch:
   schedule:
-    - cron: 30 14 * * *
+    - cron: 0 20 */3 * *
   watch:
     types: started
 
@@ -24,7 +24,7 @@ jobs:
       fail-fast: false
       matrix:
         target: [x86-64]
-        branch: [18.06, 23.05]
+        branch: [23.05]
 
     env:
       CONFIG_FILE: configs/${{ matrix.target }}.config
