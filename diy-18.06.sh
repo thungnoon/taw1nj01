@@ -67,10 +67,13 @@ git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mo
 git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
 
 # Alist
-git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
+git clone --depth=1 -b lua https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 # Golang
-git clone --depth=1 https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golangg
+git clone --depth=1 https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+
+# DDNS-GO
+git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 
 # homeproxy
 git clone --depth=1 https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
