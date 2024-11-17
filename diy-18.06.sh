@@ -51,6 +51,12 @@ git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
 # 更改 Argon 主题背景
 cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
+# 晶晨宝盒
+git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
+sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/$GITHUB_REPOSITORY'|g" package/luci-app-amlogic/root/etc/config/amlogic
+# sed -i "s|kernel_path.*|kernel_path 'https://github.com/ophub/kernel'|g" package/luci-app-amlogic/root/etc/config/amlogic
+sed -i "s|ARMv8|$RELEASE_TAG|g" package/luci-app-amlogic/root/etc/config/amlogic
+
 # SmartDNS
 git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
@@ -60,11 +66,7 @@ git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-a
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
 # MosDNS
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
-# git clone --depth=1 https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
-
-# Poweroffdevice
-git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
+git clone --depth=1 -b v5-lua https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
 # Alist
 git clone --depth=1 -b lua https://github.com/sbwml/luci-app-alist package/luci-app-alist
@@ -74,6 +76,9 @@ git clone --depth=1 https://github.com/sbwml/packages_lang_golang feeds/packages
 
 # DDNS-GO
 git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
+
+# Poweroffdevice
+git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice package/luci-app-poweroffdevice
 
 # homeproxy
 git clone --depth=1 https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
