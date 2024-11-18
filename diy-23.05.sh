@@ -12,14 +12,11 @@ sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.
 # 设置 root 用户密码为 password
 sed -i 's/root:::0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.::0:99999:7:::/g' package/base-files/files/etc/shadow
 
-# 移除要替换的包+
+# 删除要替换的包，防止插件冲突
 rm -rf feeds/packages/lang/golang
-rm -rf feeds/packages/net/alist
-rm -rf feeds/packages/net/mosdns
+rm -rf feeds/packages/net/{alist,mosdns}
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf feeds/luci/applications/luci-app-openclash
-rm -rf feeds/luci/applications/luci-app-alist
+rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-openclash,luci-app-alist}
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
