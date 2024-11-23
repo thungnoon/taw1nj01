@@ -162,8 +162,8 @@ git_clone https://github.com/immortalwrt/homeproxy luci-app-homeproxy
 clone_all https://github.com/sirpdboy/luci-app-poweroffdevice
 
 # msd_lite
-clone_all https://github.com/ximiTech/luci-app-msd_lite  
-clone_all https://github.com/ximiTech/msd_lite  
+git_clone https://github.com/ximiTech/luci-app-msd_lite
+git_clone https://github.com/ximiTech/msd_lite  
 
 # Mihomo
 clone_all https://github.com/morytyann/OpenWrt-mihomo
