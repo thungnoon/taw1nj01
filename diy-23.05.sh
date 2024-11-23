@@ -158,6 +158,9 @@ sed -i "s|ARMv8|$RELEASE_TAG|g" $destination_dir/luci-app-amlogic/root/etc/confi
 # HomeProxy
 git_clone https://github.com/immortalwrt/homeproxy luci-app-homeproxy
 
+# Poweroffdevice
+clone_all https://github.com/sirpdboy/luci-app-poweroffdevice  
+
 # Mihomo
 clone_all https://github.com/morytyann/OpenWrt-mihomo
 
