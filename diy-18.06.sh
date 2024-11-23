@@ -168,6 +168,15 @@ git_clone https://github.com/ximiTech/msd_lite
 # MosDNS
 clone_all v5-lua https://github.com/sbwml/luci-app-mosdns
 
+# HomeProxy
+git_clone https://github.com/immortalwrt/homeproxy luci-app-homeproxy
+
+# Poweroffdevice
+clone_all https://github.com/sirpdboy/luci-app-poweroffdevice
+  
+# Mihomo
+clone_all https://github.com/morytyann/OpenWrt-mihomo
+
 # Alist
 clone_all lua https://github.com/sbwml/luci-app-alist
 
