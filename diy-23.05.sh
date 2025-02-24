@@ -60,8 +60,8 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice package/
 # homeproxy
 git clone --depth=1 https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
 
-# mihomo
-git clone --depth=1 https://github.com/morytyann/OpenWrt-mihomo package/luci-app-mihomo
+# nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/luci-app-nikki
 
 # Alist
 git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
