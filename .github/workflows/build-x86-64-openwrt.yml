@@ -25,6 +25,7 @@ jobs:
       matrix:
         target: [x86-64]
         branch: [23.05]
+        branch: [18.06]
 
     env:
       CONFIG_FILE: configs/${{ matrix.target }}.config
