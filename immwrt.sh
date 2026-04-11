@@ -220,7 +220,7 @@ clone_source_code() {
     # 设置编译源码与分支
     REPO_URL="https://github.com/immortalwrt/immortalwrt"
     echo "REPO_URL=$REPO_URL" >> $GITHUB_ENV
-    REPO_BRANCH="openwrt-24.10"
+    REPO_BRANCH="openwrt-25.12"
     echo "REPO_BRANCH=$REPO_BRANCH" >> $GITHUB_ENV
 
     # 拉取编译源码
@@ -313,6 +313,9 @@ add_custom_packages() {
     clone_all https://github.com/linkease/istore luci
     clone_all https://github.com/brvphoenix/luci-app-wrtbwmon
     clone_all https://github.com/brvphoenix/wrtbwmon
+    clone_all https://github.com/sirpdboy/luci-app-poweroffdevice
+    clone_all https://github.com/sirpdboy/luci-app-partexp
+    clone_all https://github.com/stackia/rtp2httpd
 
     # 科学上网插件
     # clone_all https://github.com/fw876/helloworld
