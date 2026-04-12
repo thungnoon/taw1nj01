@@ -313,9 +313,9 @@ add_custom_packages() {
     clone_all https://github.com/linkease/istore luci
     clone_all https://github.com/brvphoenix/luci-app-wrtbwmon
     clone_all https://github.com/brvphoenix/wrtbwmon
-    clone_all https://github.com/sirpdboy/luci-app-poweroffdevice
-    clone_all https://github.com/sirpdboy/luci-app-partexp
-    clone_all https://github.com/stackia/rtp2httpd
+    git_clone https://github.com/sirpdboy/luci-app-poweroffdevice
+    git_clone https://github.com/sirpdboy/luci-app-partexp
+    git_clone https://github.com/stackia/rtp2httpd
 
     # 科学上网插件
     # clone_all https://github.com/fw876/helloworld
